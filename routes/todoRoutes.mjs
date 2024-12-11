@@ -9,9 +9,9 @@ import { authenticateUser } from "../middlewares/auth.mjs";
 
 const router = express.Router();
 
-router.get("/getTodo", authenticateUser, getTodo);
-router.post("/addTodo", authenticateUser, addTodo);
-router.put("/edit/:id", authenticateUser, updateTodo);
-router.delete("/delete/:id", authenticateUser, deleteTodo);
+router.get("/", authenticateUser, getTodo);
+router.post("/", authenticateUser, addTodo);
+router.put("/:id", authenticateUser, updateTodo);
+router.delete("/:id", authenticateUser, deleteTodo);
 
 export default router;
