@@ -17,10 +17,6 @@ const todoSchema = new mongoose.Schema(
       ref: "User", 
       required: true,
     },
-    createdOn: {
-      type: Date,
-      default: Date.now,
-    },
   },
   {
     timestamps: true,
