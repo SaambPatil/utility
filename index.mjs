@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import userRoutes from "./routes/userRoutes.mjs";
+import todoRoutes from "./routes/todoRoutes.mjs";
 import connectDb from "./db.mjs";
 import dotenv from "dotenv";
 
@@ -18,6 +19,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/users", userRoutes);
+app.use("/todos", todoRoutes);
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
